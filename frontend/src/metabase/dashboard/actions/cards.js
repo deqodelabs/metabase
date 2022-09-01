@@ -102,6 +102,23 @@ export const addImageDashCardToDashboard = function ({ dashId }) {
   });
 };
 
+export const addCustomCardToDashboard = function ({ dashId }) {
+  const virtualTextCard = createCard();
+  virtualTextCard.display = "customcard";
+  virtualTextCard.archived = false;
+
+  const dashcardOverrides = {
+    card: virtualTextCard,
+    visualization_settings: {
+      virtual_card: virtualTextCard,
+    },
+  };
+  return addDashCardToDashboard({
+    dashId: dashId,
+    dashcardOverrides: dashcardOverrides,
+  });
+};
+
 export const addVideoDashCardToDashboard = function ({ dashId }) {
   const virtualTextCard = createCard();
   virtualTextCard.display = "video";
