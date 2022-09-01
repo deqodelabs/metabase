@@ -80,7 +80,9 @@
   /* font-size: 18px; */
   color: white;
 }
-
+.footprint-title2 {
+  font-size: 20px;
+}
 .home-footer-right-section ul {
   display: flex;
   flex-direction: column;

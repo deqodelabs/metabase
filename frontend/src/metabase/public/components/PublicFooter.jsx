@@ -155,7 +155,7 @@ const PublicFooter = props => {
         <div className="home-footer-right">
           {footers.map(n => (
             <div key={n.title} className="home-footer-right-section">
-              <span className=" footprint-title2">{n.title}</span>
+              <span className="footprint-title2">{n.title}</span>
               <ul
                 role="list"
                 itemScope
