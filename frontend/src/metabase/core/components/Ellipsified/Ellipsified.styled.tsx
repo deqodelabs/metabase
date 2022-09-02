@@ -5,6 +5,7 @@ const ellipsifyCss = css`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: 200;
 `;
 
 const clampCss = (props: EllipsifiedRootProps) => css`

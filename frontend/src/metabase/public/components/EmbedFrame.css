@@ -1,7 +1,9 @@
 .EmbedFrame {
   background-color: white;
 }
-
+.EmbedFrame-header {
+  padding-top: 30px;
+}
 .EmbedFrame-header,
 .EmbedFrame-footer {
   color: var(--color-text-dark);
