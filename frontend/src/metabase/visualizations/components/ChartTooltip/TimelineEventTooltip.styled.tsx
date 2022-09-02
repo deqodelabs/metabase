@@ -29,7 +29,7 @@ export const TimelineEventInfoContainer = styled.div`
 
 export const TimelineEventName = styled.span`
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: lighter;
 `;
 
 export const TimelineEventDate = styled(DateTime)`

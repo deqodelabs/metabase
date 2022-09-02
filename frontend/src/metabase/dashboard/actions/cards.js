@@ -104,7 +104,7 @@ export const addImageDashCardToDashboard = function ({ dashId }) {
 
 export const addCustomCardToDashboard = function ({ dashId }) {
   const virtualTextCard = createCard();
-  virtualTextCard.display = "customcard";
+  virtualTextCard.display = "custom_card";
   virtualTextCard.archived = false;
 
   const dashcardOverrides = {

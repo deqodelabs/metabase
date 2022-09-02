@@ -12,6 +12,7 @@ import Image from "./visualizations/Image";
 import Video from "./visualizations/Video";
 import Table from "./visualizations/Table";
 import Text from "./visualizations/Text";
+import CustomCard from "./visualizations/CustomCard";
 import LineChart from "./visualizations/LineChart";
 import BarChart from "./visualizations/BarChart";
 import WaterfallChart from "./visualizations/WaterfallChart";
@@ -36,6 +37,7 @@ export default function () {
   registerVisualization(Gauge);
   registerVisualization(Table);
   registerVisualization(Text);
+  registerVisualization(CustomCard);
   registerVisualization(LineChart);
   registerVisualization(AreaChart);
   registerVisualization(BarChart);

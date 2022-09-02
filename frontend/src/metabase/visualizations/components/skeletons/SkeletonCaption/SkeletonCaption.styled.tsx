@@ -17,7 +17,7 @@ export const SkeletonTitle = styled(Ellipsified)<SkeletonTitleProps>`
   color: ${color("text-dark")};
   font-size: ${props => (props.size === "large" ? "1rem" : "")};
   line-height: ${props => (props.size === "large" ? "1.375rem" : "")};
-  font-weight: bold;
+  font-weight: lighter;
   overflow: hidden;
 `;
 

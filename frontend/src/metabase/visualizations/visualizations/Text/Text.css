@@ -119,7 +119,7 @@
 
 :local .text-card-markdown a {
   display: inline-block;
-  font-weight: bold;
+  font-weight: lighter;
   cursor: pointer;
   text-decoration: none;
   color: var(--color-brand);

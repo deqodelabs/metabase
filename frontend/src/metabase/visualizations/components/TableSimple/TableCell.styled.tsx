@@ -11,7 +11,7 @@ export const CellRoot = styled.td<{
   padding-right: 0.5rem;
 
   color: ${color("text-dark")};
-  font-weight: bold;
+  font-weight: lighter;
   text-align: ${props => (props.isRightAligned ? "right" : "unset")};
   white-space: nowrap;
 

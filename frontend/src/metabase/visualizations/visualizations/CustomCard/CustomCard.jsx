@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import styles from "./CustomCard.css";
+import CustomCode from "./CustomCode";
 
 import _ from "underscore";
 import cx from "classnames";
@@ -11,15 +10,6 @@ import { t } from "ttag";
 import { withInstanceLanguage, siteLocale } from "metabase/lib/i18n";
 
 import { substitute_tags } from "cljs/metabase.shared.parameters.parameters";
-
-const getSettingsStyle = settings => ({
-  "align-center": settings["text.align_horizontal"] === "center",
-  "align-end": settings["text.align_horizontal"] === "right",
-  "justify-center": settings["text.align_vertical"] === "middle",
-  "justify-end": settings["text.align_vertical"] === "bottom",
-});
-
-const REMARK_PLUGINS = [remarkGfm];
 
 export default class CustomCard extends Component {
   constructor(props) {
@@ -31,7 +21,7 @@ export default class CustomCard extends Component {
   }
 
   static uiName = "CustomCard";
-  static identifier = "customcard";
+  static identifier = "custom_card";
   static iconName = "text";
 
   static disableSettingsConfig = false;
@@ -155,16 +145,10 @@ export default class CustomCard extends Component {
           })}
         >
           {isPreviewing ? (
-            <ReactMarkdown
-              remarkPlugins={REMARK_PLUGINS}
-              className={cx(
-                "full flex-full flex flex-column text-card-markdown",
-                styles["text-card-markdown"],
-                getSettingsStyle(settings),
-              )}
-            >
-              {content}
-            </ReactMarkdown>
+            <CustomCode
+              className={"full flex-full flex flex-column"}
+              code={content}
+            />
           ) : (
             <textarea
               className={cx(
@@ -194,16 +178,7 @@ export default class CustomCard extends Component {
           "Text--single-row": isSingleRow,
         })}
       >
-        <ReactMarkdown
-          remarkPlugins={REMARK_PLUGINS}
-          className={cx(
-            "full flex-full flex flex-column text-card-markdown",
-            styles["text-card-markdown"],
-            getSettingsStyle(settings),
-          )}
-        >
-          {content}
-        </ReactMarkdown>
+        <CustomCode code={content} />
       </div>
     );
   }
