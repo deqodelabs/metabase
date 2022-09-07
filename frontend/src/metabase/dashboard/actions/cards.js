@@ -102,6 +102,23 @@ export const addImageDashCardToDashboard = function ({ dashId }) {
   });
 };
 
+export const addCustomCardToDashboard = function ({ dashId }) {
+  const virtualTextCard = createCard();
+  virtualTextCard.display = "custom_card";
+  virtualTextCard.archived = false;
+
+  const dashcardOverrides = {
+    card: virtualTextCard,
+    visualization_settings: {
+      virtual_card: virtualTextCard,
+    },
+  };
+  return addDashCardToDashboard({
+    dashId: dashId,
+    dashcardOverrides: dashcardOverrides,
+  });
+};
+
 export const addVideoDashCardToDashboard = function ({ dashId }) {
   const virtualTextCard = createCard();
   virtualTextCard.display = "video";
@@ -142,8 +159,8 @@ export const addActionButtonDashCardToDashboard = ({ dashId }) => {
   };
   const dashcardOverrides = {
     card: virtualActionsCard,
-    sizeX: 2,
-    sizeY: 1,
+    size_x: 2,
+    size_y: 1,
     visualization_settings: {
       virtual_card: virtualActionsCard,
     },

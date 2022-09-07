@@ -9,7 +9,7 @@ export const RefreshWidgetPopover = styled.div`
 
 export const RefreshWidgetTitle = styled.div`
   color: ${color("text-medium")};
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 0.75em;
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -30,7 +30,7 @@ export const RefreshOptionItem = styled.li<RefreshOptionItemProps>`
     props.isEnabled && props.isSelected
       ? color("summarize")
       : color("text-dark")};
-  font-weight: bold;
+  font-weight: lighter;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   cursor: pointer;

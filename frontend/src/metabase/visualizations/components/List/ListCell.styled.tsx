@@ -8,7 +8,7 @@ export const CellRoot = styled.td`
   padding-right: 0.5rem;
 
   color: ${color("text-medium")};
-  font-weight: bold;
+  font-weight: lighter;
   text-align: left;
   white-space: nowrap;
 `;

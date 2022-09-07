@@ -25,14 +25,14 @@
 
 :local .Value {
   color: var(--color-text-dark);
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 :local .Title {
   color: var(--color-text-light);
   font-size: 14px;
-  font-weight: bold;
+  font-weight: lighter;
   text-transform: uppercase;
 }
 

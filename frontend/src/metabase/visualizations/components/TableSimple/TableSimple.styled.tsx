@@ -101,7 +101,7 @@ export const TableHeaderCellContent = styled.button<{
   }
 
   &:hover {
-    color: ${() => color("brand")};
+    color: ${() => color("saturated-blue")};
   }
 `;
 

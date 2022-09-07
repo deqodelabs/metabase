@@ -82,6 +82,7 @@ class DashboardHeader extends Component {
     addTextDashCardToDashboard: PropTypes.func.isRequired,
     addImageDashCardToDashboard: PropTypes.func.isRequired,
     addVideoDashCardToDashboard: PropTypes.func.isRequired,
+    addCustomCardToDashboard: PropTypes.func.isRequired,
     addTabsDashCardToDashboard: PropTypes.func.isRequired,
     fetchDashboard: PropTypes.func.isRequired,
     saveDashboardAndCards: PropTypes.func.isRequired,
@@ -127,6 +128,11 @@ class DashboardHeader extends Component {
   }
   onAddActionButton() {
     this.props.addActionButtonDashCardToDashboard({
+      dashId: this.props.dashboard.id,
+    });
+  }
+  onAddCustomCard() {
+    this.props.addCustomCardToDashboard({
       dashId: this.props.dashboard.id,
     });
   }
@@ -276,7 +282,7 @@ class DashboardHeader extends Component {
       //     {showMediaModal && this.renderMediaPopover()}
       //   </span>,
       // );
-      if (isAdmin && dashboard.is_app_page) {
+      if (isAdmin) {
         buttons.push(
           <Tooltip key="add-action-button" tooltip={t`Add action button`}>
             <a
@@ -452,6 +458,12 @@ class DashboardHeader extends Component {
         type: "Video",
         onclick: () => {
           this.onAddVideoBox();
+        },
+      },
+      {
+        type: "Custom Card",
+        onclick: () => {
+          this.onAddCustomCard();
         },
       },
       {

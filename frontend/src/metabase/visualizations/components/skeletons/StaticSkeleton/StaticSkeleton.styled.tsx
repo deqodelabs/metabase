@@ -11,7 +11,7 @@ export const SkeletonTitle = styled(Ellipsified)`
   color: ${color("text-dark")};
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: bold;
+  font-weight: lighter;
 `;
 
 export const SkeletonDescription = styled(Ellipsified)`

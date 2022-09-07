@@ -36,7 +36,7 @@
 }
 .LineAreaBarChart .dc-chart g.row text.inside {
   fill: white;
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 /* turn off ticks and domain lines */
