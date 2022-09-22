@@ -6,6 +6,7 @@ import { push } from "react-router-redux";
 import "./PublicFooter.css";
 import Link from "metabase/core/components/Link";
 import ExternalLink from "metabase/core/components/ExternalLink";
+import LogoIcon from "metabase/components/LogoIcon";
 
 const footers = [
   {
@@ -13,23 +14,15 @@ const footers = [
     items: [
       {
         label: "Insights",
-        url: "/",
+        url: "#",
       },
       {
         label: "Docs",
-        url: "https://docs.NFTRover.network/",
+        url: "#",
       },
       {
         label: "Tutorials",
-        url: "/tutorials/visualizations",
-      },
-      {
-        label: "Data Dictionary",
-        url: "https://www.NFTRover.network/@NFTRover/NFTRover-Datasets-Data-Dictionary",
-      },
-      {
-        label: "Pricing",
-        url: "/pricing",
+        url: "#",
       },
     ],
   },
@@ -37,20 +30,12 @@ const footers = [
     title: "Analytics",
     items: [
       {
-        label: "GameFi Protocols",
-        url: "/protocols",
-      },
-      {
         label: "Projects Analytics",
-        url: "/projects",
+        url: "#",
       },
       {
         label: "Chains Analytics",
-        url: "/chains",
-      },
-      {
-        label: "NFTRover Enterprise",
-        url: "/defi360",
+        url: "#",
       },
     ],
   },
@@ -59,19 +44,15 @@ const footers = [
     items: [
       {
         label: "Why NFTRover",
-        url: "/about",
+        url: "#",
       },
       {
         label: "News",
-        url: "/news/featured",
+        url: "#",
       },
       {
         label: "Write for Us",
-        url: "/news/write-for-us",
-      },
-      {
-        label: "Pricing",
-        url: "/pricing",
+        url: "#",
       },
       {
         label: "Contact Us",
@@ -84,23 +65,23 @@ const footers = [
     items: [
       {
         label: "Discord",
-        url: "https://discord.com/invite/3HYaR6USM7",
+        url: "#",
       },
       {
         label: "Telegram",
-        url: "https://t.me/joinchat/4-ocuURAr2thODFh",
+        url: "#",
       },
       {
         label: "Twitter",
-        url: "https://twitter.com/NFTRover_Data",
+        url: "#",
       },
       {
         label: "Medium",
-        url: "https://medium.com/@footprintofficial",
+        url: "#",
       },
       {
         label: "Youtube",
-        url: "https://www.youtube.com/channel/UCKwZbKyuhWveetGhZcNtSTg",
+        url: "#",
       },
     ],
   },
@@ -114,7 +95,7 @@ const PublicFooter = props => {
     <footer className="home-footer-container footprint-primary-text">
       <div className="home-footer">
         <div className="home-footer-left">
-          <img src={""} alt="NFTRover analytics" />
+          <LogoIcon height={28} />
           <span data-nosnippet>
             NFTRover is a powerful yet easy-to-use analytics tool to uncover and
             visualize blockchain data. The product puts user experience first
@@ -196,7 +177,7 @@ const PublicFooter = props => {
           rel="noreferrer"
           target="_blank"
         >
-          <strong>footprint</strong>
+          <strong>nftrover</strong>
         </a>
         <a
           href="https://www.NFTRover.network/sitemap.xml"
@@ -204,7 +185,7 @@ const PublicFooter = props => {
           rel="noreferrer"
           target="_blank"
         >
-          <strong>footprint</strong>
+          <strong>nftrover</strong>
         </a>
       </div>
     </footer>

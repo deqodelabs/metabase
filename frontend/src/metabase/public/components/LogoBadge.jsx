@@ -7,7 +7,7 @@ import { t, jt } from "ttag";
 
 const LogoBadge = ({ dark }) => (
   <ExternalLink
-    href="https://metabase.com/"
+    href="https://nftrover.ai/"
     target="_blank"
     className="h4 flex text-bold align-center no-decoration"
   >
@@ -15,7 +15,7 @@ const LogoBadge = ({ dark }) => (
     <span className="text-small">
       <span className="ml1 md-ml2 text-medium">{jt`Powered by ${(
         <span className={dark ? "text-white" : "text-brand"}>
-          {t`Metabase`}
+          {t`NFTRover`}
         </span>
       )}`}</span>
     </span>
