@@ -9,8 +9,8 @@ import ChartClickActions from "metabase/visualizations/components/ChartClickActi
 import LoadingSpinner from "metabase/components/LoadingSpinner";
 import Icon from "metabase/components/Icon";
 import Tooltip from "metabase/components/Tooltip";
-import { t, jt } from "ttag";
-import { duration, formatNumber } from "metabase/lib/formatting";
+import { t } from "ttag";
+import { formatNumber } from "metabase/lib/formatting";
 import * as MetabaseAnalytics from "metabase/lib/analytics";
 
 import {
@@ -322,7 +322,6 @@ class Visualization extends React.PureComponent {
       errorIcon,
       isSlow,
       isMobile,
-      expectedDuration,
       replacementContent,
       onOpenChartSettings,
       onUpdateVisualizationSettings,
@@ -498,8 +497,9 @@ class Visualization extends React.PureComponent {
           <div className="flex-full p1 text-centered text-brand flex flex-column layout-centered">
             {isSlow ? (
               <div className="text-slate">
-                <div className="h4 text-bold mb1">{t`Still Waiting...`}</div>
-                {isSlow === "usually-slow" ? (
+                <div className="h4 text-bold mb1">{t`Loading...`}</div>
+                {/* TODO: Add the spinner gif */}
+                {/* {isSlow === "usually-slow" ? (
                   <div>
                     {jt`This usually takes an average of ${(
                       <span style={{ whiteSpace: "nowrap" }}>
@@ -509,11 +509,11 @@ class Visualization extends React.PureComponent {
                     <br />
                     {t`(This is a bit long for a dashboard)`}
                   </div>
-                ) : (
-                  <div>
+                ) : ( */}
+                {/* <div>
                     {t`This is usually pretty fast but seems to be taking a while right now.`}
                   </div>
-                )}
+                )} */}
               </div>
             ) : (
               <LoadingSpinner className="text-slate" />

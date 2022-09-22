@@ -44,7 +44,7 @@
   via tru if a name isn't configured."
   []
   (or (public-settings/application-name)
-      (trs "Metabase")))
+      (trs "NFTRover.ai")))
 
 ;; Dev only -- disable template caching
 (when config/is-dev?
