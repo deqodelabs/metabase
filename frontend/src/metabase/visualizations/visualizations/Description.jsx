@@ -49,8 +49,9 @@ export default class Description extends Component {
               ref={this.labelRef}
               style={{
                 position: "absolute",
-                fontWeight: "400",
+                fontWeight: "600",
                 color: "#4C5773",
+                fontSize: 18,
               }}
             >
               {value}
