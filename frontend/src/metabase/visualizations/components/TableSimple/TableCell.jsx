@@ -16,6 +16,7 @@ import { getColumnExtent } from "metabase/visualizations/lib/utils";
 
 import MiniBar from "../MiniBar";
 import { CellRoot, CellContent } from "./TableCell.styled";
+import ChangePercentIcon from "../ChangePercentIcon";
 
 function getCellData({
   value,
@@ -23,6 +24,7 @@ function getCellData({
   extraData,
   cols,
   rows,
+  rowIndex,
   columnIndex,
   columnSettings,
 }) {
@@ -35,6 +37,22 @@ function getCellData({
         value={value}
         options={columnSettings}
         extent={getColumnExtent(cols, rows, columnIndex)}
+      />
+    );
+  }
+  if (columnSettings["show_change_in_percentage"]) {
+    let percentage;
+    if (columnSettings["show_change_in_percentage"]) {
+      const splittedValue = value.split("%");
+      value = splittedValue[0];
+      percentage = splittedValue[1];
+    }
+
+    return (
+      <ChangePercentIcon
+        value={value}
+        percentage={percentage}
+        options={columnSettings}
       />
     );
   }
@@ -102,10 +120,20 @@ function TableCell({
         extraData,
         cols,
         rows,
+        rowIndex,
         columnIndex,
         columnSettings,
       }),
-    [value, clicked, extraData, cols, rows, columnIndex, columnSettings],
+    [
+      value,
+      clicked,
+      extraData,
+      cols,
+      rows,
+      rowIndex,
+      columnIndex,
+      columnSettings,
+    ],
   );
 
   const isLink = cellData && cellData.type === ExternalLink;

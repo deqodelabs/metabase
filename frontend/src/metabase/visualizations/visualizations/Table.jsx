@@ -251,6 +251,12 @@ export default class Table extends Component {
         widget: "toggle",
       };
     }
+    if (!isNumber(column)) {
+      settings["show_change_in_percentage"] = {
+        title: t`Show a change with percentage`,
+        widget: "toggle",
+      };
+    }
 
     let defaultValue = !column.semantic_type || isURL(column) ? "link" : null;
 
